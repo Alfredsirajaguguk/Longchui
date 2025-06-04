@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMK Bina Informatika Bogor</title>
+
+  <!-- Font Awesome CDN untuk icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: white !important;
+      color: #1f2937 !important;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header, footer {
+      background-color: white;
+      color: #1f2937;
+      text-align: center;
+      padding: 16px 0;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #f3f4f6;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn-jurusan {
+      background-color: transparent;
+      color: #1d4ed8;
+      border: 2px solid #1d4ed8;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .btn-jurusan::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #1d4ed8;
+      transition: width 0.3s ease;
+    }
+
+    .btn-jurusan:hover::after {
+      width: 100%;
+    }
+
+    .btn-jurusan:hover {
+      background-color: #1d4ed8;
+      color: white;
+    }
+
+    .btn-website {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-website:hover {
+      background-color: #059669;
+      transform: scale(1.05);
+    }
+
+    .social-links {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #1f2937;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #1d4ed8;
+    }
+
+    footer {
+      font-size: 14px;
+    }
+
+    /* Animasi saat scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header class="animate-on-scroll">
+    SMK Bina Informatika Bogor
+  </header>
+
+  <main>
+    <div class="card animate-on-scroll">
+      <img src="jawajawa.png" alt="Gambar Promo 1" class="animate-on-scroll">
+      <img src="teuing.jpg" alt="Gambar Promo 2" class="animate-on-scroll">
+
+      <h1 class="animate-on-scroll">Selamat Datang di Pengenalan Jurusan</h1>
+      <p class="animate-on-scroll">Silakan pilih salah satu jurusan di bawah ini untuk melihat keahlian dan informasi lengkap tentang jurusan tersebut.</p>
+
+      <div class="button-container animate-on-scroll">
+        <a href="rpl.html" class="btn-jurusan">RPL</a>
+        <a href="mm.html" class="btn-jurusan">MM</a>
+        <a href="tkj.html" class="btn-jurusan">TKJ</a>
+        <a href="otkp.html" class="btn-jurusan">OTKP</a>
+        <a href="pkm.html" class="btn-jurusan">PKM</a>
+      </div>
+
+      <a href="https://alfredsirajaguguk.github.io/Pidong/" class="btn-website animate-on-scroll" target="_blank">🌐 Kunjungi Website</a>
+
+      <div class="social-links animate-on-scroll">
+        <a href="https://www.instagram.com/xml6564?igsh=ZW9qdGdmZG9rY2hj" target="_blank" title="Instagram">
+          <i class="fab fa-instagram" style="color:#E4405F;"></i>
+        </a>
+        <a href="https://wa.me/+6282111262656" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="animate-on-scroll">
+    © Pidong
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
